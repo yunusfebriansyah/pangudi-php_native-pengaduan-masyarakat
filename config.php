@@ -14,7 +14,6 @@ function showAllData($table) {
   return $data;
 }
 
-
 # function buat tampilin detail data dari tabel tertentu
 function showDetailData($table, $column, $value) {
   global $connection;
