@@ -5,8 +5,6 @@
 
 <h4 class="fw-bold pt-3"><span class="text-muted fw-light">Master Data /</span> Pengaduan</h4>
 
-<a href="tambah.php" class="btn btn-primary mb-4">Tambah Data</a>
-
 <div class="card">
   <div class="table-responsive text-nowrap">
     <table class="table table-striped">
@@ -37,8 +35,7 @@
           <td><?= $data[$i]['status']; ?></td>
           <td>
             <a href="detail.php?id=<?= $data[$i]['id_pengaduan']; ?>" class="btn btn-sm btn-primary"><i class='bx bx-show'></i></a>
-            <a href="edit.php?id=<?= $data[$i]['id_pengaduan']; ?>" class="btn btn-sm btn-success"><i class='bx bx-pencil'></i></a>
-            <a href="hapus.php?id=<?= $data[$i]['id_pengaduan']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('yakin akan dihapus?');"><i class='bx bx-trash' ></i></a>
+            <a href="tangani.php?id_pengaduan=<?= $data[$i]['id_pengaduan']; ?>" class="btn btn-sm btn-info">Tangani <i class='bx bxs-hand-up'></i></a>
           </td>
         </tr>
 

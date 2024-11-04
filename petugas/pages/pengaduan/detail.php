@@ -11,6 +11,7 @@
 
 <div class="card">
   <div class="card-body">
+
       <h5 class="m-0">ID Pengaduan</h5>
       <p><?= $data['id_pengaduan'];?></p>
 
@@ -34,6 +35,9 @@
       
       <h5 class="m-0">Status Pengaduan</h5>
       <p><?= $data['status'];?></p>
+
+      <a href="tangani.php?id_pengaduan=<?= $data['id_pengaduan']; ?>" class="btn btn-sm btn-info">Tangani <i class='bx bxs-hand-up'></i></a>
+      
   </div>
 </div>
 
