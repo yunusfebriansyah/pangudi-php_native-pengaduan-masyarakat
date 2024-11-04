@@ -3,8 +3,9 @@
 <?php include_once('../../00-templates/menu.php'); ?>
 <?php include_once('../../00-templates/navbar.php'); ?>
 
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Master Data /</span> Pengaduan</h4>
+<h4 class="fw-bold pt-3"><span class="text-muted fw-light">Master Data /</span> Pengaduan</h4>
 
+<a href="tambah.php" class="btn btn-primary mb-4">Tambah Data</a>
 
 <div class="card">
   <div class="table-responsive text-nowrap">
@@ -35,9 +36,9 @@
           <td><?= $data[$i]['tlp_masyarakat']; ?></td>
           <td><?= $data[$i]['status']; ?></td>
           <td>
-            <a href="detail.php" class="btn btn-sm btn-primary"><i class='bx bx-show'></i></a>
-            <a href="edit.php" class="btn btn-sm btn-success"><i class='bx bx-pencil'></i></a>
-            <a href="hapus.php" class="btn btn-sm btn-danger" onclick="return confirm('yakin akan dihapus?');"><i class='bx bx-trash' ></i></a>
+            <a href="detail.php?id=<?= $data[$i]['id_pengaduan']; ?>" class="btn btn-sm btn-primary"><i class='bx bx-show'></i></a>
+            <a href="edit.php?id=<?= $data[$i]['id_pengaduan']; ?>" class="btn btn-sm btn-success"><i class='bx bx-pencil'></i></a>
+            <a href="hapus.php?id=<?= $data[$i]['id_pengaduan']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('yakin akan dihapus?');"><i class='bx bx-trash' ></i></a>
           </td>
         </tr>
 
