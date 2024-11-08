@@ -32,3 +32,19 @@ function deleteData($table, $column, $value) {
   $query = "DELETE FROM $table WHERE $column = $value";
   return mysqli_query($connection, $query);
 }
+
+
+// function buat tambah data dari tabel masyarakat
+function addMasyarakat($nik, $nama, $username, $password, $tlp) {
+  global $connection;
+  $query = "INSERT INTO tbl_masyarakat (nik, nama, username, password, tlp) VALUES ('$nik', '$nama', '$username', '$password', '$tlp')";
+  return mysqli_query($connection, $query);
+}
+
+// function buat tambah data dari tabel petugas
+function addPetugas($nama_petugas, $username, $password, $tlp, $level) {
+  global $connection;
+  $query = "INSERT INTO tbl_petugas (nama_petugas, username, password, tlp, level) VALUES ('$nama_petugas', '$username', '$password', '$tlp', '$level')";
+  return mysqli_query($connection, $query);
+}
+
