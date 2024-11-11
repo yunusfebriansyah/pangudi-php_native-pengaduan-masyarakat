@@ -48,3 +48,16 @@ function addPetugas($nama_petugas, $username, $password, $tlp, $level) {
   return mysqli_query($connection, $query);
 }
 
+// function buat edit data dari tabel masyarakat
+function editMasyarakat($nama, $username, $password, $tlp, $nikLama) {
+  global $connection;
+  $query = "UPDATE tbl_masyarakat SET nama = '$nama', username = '$username', password = '$password', tlp = '$tlp' WHERE nik = '$nikLama'";
+  return mysqli_query($connection, $query);
+}
+
+// function buat tambah data dari tabel petugas
+function editPetugas($nama_petugas, $username, $password, $tlp, $level, $id) {
+  global $connection;
+  $query = "UPDATE tbl_petugas SET nama_petugas = '$nama_petugas', username = '$username', password = '$password', tlp = '$tlp', level = '$level' WHERE id_petugas = '$id'";
+  return mysqli_query($connection, $query);
+}

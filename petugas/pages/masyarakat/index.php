@@ -35,7 +35,7 @@
           <td><?= $data[$i]['username']; ?></td>
           <td><?= $data[$i]['tlp']; ?></td>
           <td>
-            <a href="edit.php" class="btn btn-sm btn-success"><i class='bx bx-pencil'></i></a>
+            <a href="edit.php?id=<?= $data[$i]['nik']; ?>" class="btn btn-sm btn-success"><i class='bx bx-pencil'></i></a>
             <a href="hapus.php" class="btn btn-sm btn-danger" onclick="return confirm('yakin akan dihapus?');"><i class='bx bx-trash' ></i></a>
           </td>
         </tr>
