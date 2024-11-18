@@ -61,3 +61,16 @@ function editPetugas($nama_petugas, $username, $password, $tlp, $level, $id) {
   $query = "UPDATE tbl_petugas SET nama_petugas = '$nama_petugas', username = '$username', password = '$password', tlp = '$tlp', level = '$level' WHERE id_petugas = '$id'";
   return mysqli_query($connection, $query);
 }
+
+// buat function buat menangani pengaduan
+function responsePengaduan($tanggapan, $idPengaduan)
+{
+  global $connection;
+  $time = time();
+  $now = date('Y-m-d', $time);
+  $queryAddTanggapan = mysqli_query($connection, "INSERT INTO tbl_tanggapan VALUES (NULL, $idPengaduan, '$now', '$tanggapan', 1)");
+
+  $queryUpdatePengaduan = mysqli_query($connection, "UPDATE tbl_pengaduan SET status = 'selesai' WHERE id_pengaduan = $idPengaduan");
+
+  return $queryAddTanggapan AND $queryUpdatePengaduan;
+}
